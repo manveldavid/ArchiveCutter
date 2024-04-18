@@ -98,7 +98,7 @@ public class Program
         }
         if(modeChar == assembleMode)
         {
-            Console.WriteLine("\nEnter first part path (without digit -> .part):");
+            Console.WriteLine("\nEnter part path without digit (*.part):");
             var firstPartPath = Console.ReadLine()!;
 
             if (string.IsNullOrEmpty(firstPartPath))
