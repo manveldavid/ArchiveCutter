@@ -76,7 +76,7 @@ public class Program
                         partStream.Close();
                     }
 
-                    using (var cypherFunc = SHA256.Create())
+                    using (var cypherFunc = SHA512.Create())
                     {
                         using (var stream = File.OpenRead(partPath))
                         {
@@ -124,7 +124,7 @@ public class Program
 
                     using (var partStream = File.OpenRead(partPath))
                     {
-                        using (var cypherFunc = SHA256.Create())
+                        using (var cypherFunc = SHA512.Create())
                         {
                             byte[] checksumBytes = cypherFunc.ComputeHash(partStream);
                             checksum = BitConverter.ToString(checksumBytes).Replace("-", string.Empty);
